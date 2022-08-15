@@ -1,0 +1,98 @@
+@gantt-chart-sider-width: 300px;
+@gantt-chart-row-height: 30px;
+@gantt-chart-border: 1px solid #ddd;
+@gantt-chart-background: #f2f2f2;
+
+.gantt-chart {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &-head {
+    &-sider {
+      width: @gantt-chart-sider-width;
+      flex-shrink: 0;
+      overflow: hidden;
+      background-color: #fff;
+      position: relative;
+      z-index: 2;
+    }
+
+
+    &-main {
+      flex: 1;
+
+      &-row {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        .col {
+          position: absolute;
+        }
+
+        .background {
+          background-color: @gantt-chart-background;
+        }
+      }
+    }
+
+    &-row {
+      border-bottom: @gantt-chart-border;
+      height: @gantt-chart-row-height;
+      line-height: @gantt-chart-row-height;
+      border-right: @gantt-chart-border;
+      text-align: center;
+
+      &-col {
+        flex-shrink: 0;
+        width: 30px;
+        height: inherit;
+        border-right: @gantt-chart-border;
+        border-bottom: @gantt-chart-border;
+        text-align: center;
+        line-height: @gantt-chart-row-height
+      }
+    }
+
+    flex-shrink: 0;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-body {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    &-sider {
+      width: @gantt-chart-sider-width;
+      height: auto;
+      position: relative;
+    }
+
+    &-main {
+      flex: 1;
+      overflow: auto;
+      position: relative;
+    }
+
+    &-row {
+      height: @gantt-chart-row-height;
+      line-height: @gantt-chart-row-height;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      position: absolute;
+      width: 100%;
+
+      .ant-col {
+        text-align: center;
+        border-right: @gantt-chart-border;
+      }
+    }
+  }
+}

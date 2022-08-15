@@ -1,0 +1,20 @@
+.gantt-chart-task {
+  position: absolute;
+  top: 15%;
+  background-color: #5688f8;
+  cursor: move;
+
+  &:hover {
+    .gantt-chart-task-drop {
+      display: block;
+    }
+  }
+
+  &-drop {
+    position: absolute;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+  }
+}

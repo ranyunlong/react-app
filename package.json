@@ -1,0 +1,65 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "project.config.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "yarn theme:light && yarn theme:dark && react-scripts build",
+    "test": "react-scripts test",
+    "swagger": "react-scripts swagger-generator",
+    "eslint": "eslint ./src/modules/*.ts --fix",
+    "theme:light": "lessc --js --modify-var='ant-prefix=ant' -x ./node_modules/antd/dist/antd.less ./public/theme/antd.min.css",
+    "theme:dark": "lessc --js --modify-var='ant-prefix=ant-dark' -x ./node_modules/antd/dist/antd.dark.less ./public/theme/antd.dark.min.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@quick-toolkit/ant-design-plus": "^1.0.3",
+    "@quick-toolkit/class-transformer": "^1.0.3",
+    "@quick-toolkit/http": "^1.0.4",
+    "@quick-toolkit/react-router-dom": "^6.3.0",
+    "@types/crypto-js": "^4.1.1",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^17.0.31",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.6",
+    "@types/redux-logger": "^3.0.9",
+    "antd": "^4.20.6",
+    "axios": "^0.27.2",
+    "classnames": "^2.3.1",
+    "core-js": "^3.21.1",
+    "crypto-js": "^4.1.1",
+    "echarts": "^5.3.2",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.1",
+    "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1"
+  },
+  "devDependencies": {
+    "@quick-toolkit/react-scripts": "^1.0.10",
+    "babel-plugin-import": "^1.13.3",
+    "prettier": "^2.6.2",
+    "web-vitals": "^2.1.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
