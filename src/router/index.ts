@@ -8,6 +8,12 @@ export const router = new RCRouter([
     model: LanguageValidator,
     routes: [
       {
+        path: 'bpmn.html',
+        component: 'bpmn',
+        name: 'BPMN',
+        title: 'BPMN',
+      },
+      {
         path: 'users',
         model: LanguageValidator,
         component: 'users',

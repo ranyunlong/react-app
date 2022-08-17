@@ -1,11 +1,17 @@
-import { Result } from 'antd';
+import { Result, Layout } from 'antd';
 
 export default () => {
   return (
-    <Result
-      status={404}
-      title="Page Not Found"
-      subTitle="SORRY, SOMETHING WENT WRONG – WE APOLOGIZE FOR ANY INCONVENIENCE."
-    />
+    <Layout
+      style={{
+        height: '100vh',
+      }}
+    >
+      <Result
+        icon={<Result.PRESENTED_IMAGE_404 />}
+        title="Page Not Found"
+        subTitle="SORRY, SOMETHING WENT WRONG – WE APOLOGIZE FOR ANY INCONVENIENCE."
+      />
+    </Layout>
   );
 };
