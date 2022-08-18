@@ -2,6 +2,7 @@ import BPMNModeler from 'bpmn-js/lib/Modeler';
 import { createRef, useLayoutEffect } from 'react';
 
 import './styles/index.less';
+import { TranslateModule } from './locales';
 
 export default () => {
   const element = createRef<HTMLDivElement>();
@@ -14,9 +15,11 @@ export default () => {
         keyboard: {
           bindTo: window,
         },
+        additionalModules: [TranslateModule],
       });
 
-      viewer.importXML(`<?xml version="1.0" encoding="UTF-8"?>
+      viewer.importXML(
+        `<?xml version="1.0" encoding="UTF-8"?>
       <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn">
         <bpmn2:process id="Process_1" isExecutable="false">
           <bpmn2:startEvent id="StartEvent_1"/>
@@ -28,14 +31,18 @@ export default () => {
             </bpmndi:BPMNShape>
           </bpmndi:BPMNPlane>
         </bpmndi:BPMNDiagram>
-      </bpmn2:definitions>`);
+      </bpmn2:definitions>`
+      );
 
-      console.log(viewer);
+      const eventBus = viewer.get('eventBus');
+      eventBus.on('bpmnElement.added', (e: any) => {
+        console.log(e);
+      });
     }
   }, [element]);
   return (
     <div className="page-bpmn">
-      <div className="bpmn-modeler" ref={element}></div>
+      <div className="bpmn-modeler" ref={element} />
     </div>
   );
 };

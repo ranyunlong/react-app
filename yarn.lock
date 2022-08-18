@@ -1448,15 +1448,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/bpmn-js-embedded-comments@^1.0.1":
-  version "1.0.1"
-  resolved "http://registry.npm.mingqi-tech.cn:4873/@types%2fbpmn-js-embedded-comments/-/bpmn-js-embedded-comments-1.0.1.tgz#a69c3754833f68d713ae73bab1e104a40be19f13"
-  integrity sha512-VWVUvZ3BlQ/dVJ3LjQ2z2JKYTyPOVyih1F5Mgulohz2hGt4wxGgzpHVAu/ln6DcpQanafyo+bX2GY83iwxw3vw==
-
-"@types/bpmn-js@^1.0.4":
-  version "1.0.4"
-  resolved "http://registry.npm.mingqi-tech.cn:4873/@types%2fbpmn-js/-/bpmn-js-1.0.4.tgz#9dffcd977e0894e4105675511f2c1562f5f60eb4"
-  integrity sha512-/n9qAcFe32Epz6p288bJIpo3Bw04ByBJkUX7NUki+8l+3um1ZluWM/ApP6lJ44fUMeDgVepivUikSsoaQLcCVw==
+"@types/bpmn-js@^1.0.0":
+  version "1.0.0"
+  resolved "http://registry.npm.mingqi-tech.cn:4873/@types%2fbpmn-js/-/bpmn-js-1.0.0.tgz#c15de2e2f1c4b2df4fc558ab8cac454564db01be"
+  integrity sha512-Vdoyk4YEDQKG1xW1olBOD/oTvVKEzfED52likysMCBHJc9Djyz0DAtBieGdo6LJFlGNRDCKnotwRq+iEaEwCOA==
   dependencies:
     "@types/bpmn-moddle" "^5.1.6"
     "@types/css.escape" "^1.5.0"
@@ -2571,6 +2566,13 @@ camelcase@^5.3.1:
   resolved "http://registry.npm.mingqi-tech.cn:4873/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
   integrity sha1-48mzFWnhBoEd8kL3FXJaH0xJQyA=
 
+camunda-transaction-boundaries@^1.1.2:
+  version "1.1.2"
+  resolved "http://registry.npm.mingqi-tech.cn:4873/camunda-transaction-boundaries/-/camunda-transaction-boundaries-1.1.2.tgz#9874f16ebf1aaa47ddf47c99bdb630603fdde873"
+  integrity sha512-Brxesvq+unrTZOta0cUGRgl2vW/Hwen48BR0CQNSkeR0KxS90fv+qFXR0HvGiGIz55tDABzwlLk3xfWYbQQ4IA==
+  dependencies:
+    min-dash "^3.5.2"
+
 caniuse-api@^3.0.0:
   version "3.0.0"
   resolved "http://registry.npm.mingqi-tech.cn:4873/caniuse-api/-/caniuse-api-3.0.0.tgz#5e4d90e2274961d46291997df599e3ed008ee4c0"
@@ -3294,6 +3296,16 @@ diagram-js-direct-editing@^1.7.0:
   dependencies:
     min-dash "^3.5.2"
     min-dom "^3.1.3"
+
+diagram-js-minimap@^2.1.1:
+  version "2.1.1"
+  resolved "http://registry.npm.mingqi-tech.cn:4873/diagram-js-minimap/-/diagram-js-minimap-2.1.1.tgz#88fc4140e17d7a5fc612ca8c6ce0d6e3021204d8"
+  integrity sha512-H+UM6qoIVgJAOJgm3kZ57zpPyTx41YtAQAs0c/rrRube25ljygA0PSO5x42CJNulJdgK0AEWdsnhefMzlxyKfQ==
+  dependencies:
+    css.escape "^1.5.1"
+    min-dash "^3.5.2"
+    min-dom "^3.1.1"
+    tiny-svg "^2.2.2"
 
 diagram-js@^8.7.1:
   version "8.7.1"
@@ -5499,7 +5511,7 @@ min-dash@^3.0.0, min-dash@^3.5.2, min-dash@^3.8.1:
   resolved "http://registry.npm.mingqi-tech.cn:4873/min-dash/-/min-dash-3.8.1.tgz#09a8bd8a041d65eec4732042cde9cb24a6e84b0d"
   integrity sha512-evumdlmIlg9mbRVPbC4F5FuRhNmcMS5pvuBUbqb1G9v09Ro0ImPEgz5n3khir83lFok1inKqVDjnKEg3GpDxQg==
 
-min-dom@^3.1.3, min-dom@^3.2.0:
+min-dom@^3.1.1, min-dom@^3.1.3, min-dom@^3.2.0:
   version "3.2.1"
   resolved "http://registry.npm.mingqi-tech.cn:4873/min-dom/-/min-dom-3.2.1.tgz#c272a814397d8bfe97edd12670e7ac34123c043f"
   integrity sha512-v6YCmnDzxk4rRJntWTUiwggLupPw/8ZSRqUq0PDaBwVZEO/wYzCH4SKVBV+KkEvf3u0XaWHly5JEosPtqRATZA==

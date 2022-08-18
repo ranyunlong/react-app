@@ -70,3 +70,26 @@ declare global {
     export default classes;
   }
 }
+
+declare interface BPMNContextPadProvider {
+  $inject: string[];
+}
+
+declare interface BPMNModule {
+  contextPadProvider: [string, BPMNContextPadProvider];
+}
+
+declare module 'bpmn-js-embedded-comments' {
+  declare var m: BPMNModule;
+  export default m;
+}
+
+declare module 'diagram-js-minimap' {
+  declare var m: BPMNModule;
+  export default m;
+}
+
+declare module 'camunda-transaction-boundaries' {
+  declare var m: BPMNModule;
+  export default m;
+}
